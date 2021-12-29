@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "Juego.h"
+#include "Header/Juego.h"
 using namespace sf;
 
 int main(int argc, char *argv[]){

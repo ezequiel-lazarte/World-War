@@ -1,7 +1,7 @@
 #ifndef ESCENA_H
 #define ESCENA_H
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "../Juego.h"
+#include "Juego.h"
 
 class Juego;
 class Escena {

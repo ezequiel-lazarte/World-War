@@ -1,8 +1,7 @@
 #ifndef JUEGO_H
 #define JUEGO_H
-#include <SFML/Graphics/RenderWindow.hpp>
-#include "Escenas/Escena.h"
-
+#include "Scene.h"
+#include "Resources.h"
 class Escena;
 class Juego {
 public:
@@ -12,12 +11,16 @@ public:
 	void ProcesarEventos();
 	void Dibujar();
 	void CambiarEscena(Escena *Proxima_Escena);
+	void Finalizar();
 	sf::RenderWindow &getWindow();
 	~Juego();
 private:
-	sf::RenderWindow m_window;
 	Escena *m_escena;
 	Escena *m_proxima_escena = nullptr;
+	Resources *m_resources;
+	sf::RenderWindow m_window;
+	sf::Vector2f m_size_screen;
+	int m_fps, m_volumen;
 };
 
 #endif

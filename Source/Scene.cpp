@@ -1,4 +1,4 @@
-#include "Escena.h"
+#include "../Header/Scene.h"
 #include <SFML/Window/Event.hpp>
 
 Escena::Escena() {
