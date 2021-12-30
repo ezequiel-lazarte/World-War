@@ -6,10 +6,10 @@
 
 Juego::Juego() : m_size_screen(1920, 1200), m_window(sf::VideoMode(1920, 1200), "World War"), m_fps(60) {
 	m_resources = new Resources;
+	m_volumen = 50;
 	m_window.setVerticalSyncEnabled(true);
 	m_window.setFramerateLimit(m_fps);
 	m_escena = new Menu(m_resources, m_volumen);
-	m_volumen = 50;
 }
 
 void Juego::Jugar ( ) {
@@ -28,7 +28,7 @@ void Juego::Jugar ( ) {
 void Juego::ProcesarEventos ( ) {
 	sf::Event e;
 	while(m_window.pollEvent(e)) {
-		if(e.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) m_window.close();
+		if(e.type == sf::Event::Closed) m_window.close();
 		else m_escena-> Procesar_evento(e);
 	}
 }
