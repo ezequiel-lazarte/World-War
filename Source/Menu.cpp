@@ -7,7 +7,7 @@ Menu::Menu(Resources *resources, int volumen) {
 	m_volumen = volumen;
 	m_background.setTexture(m_resources->getBackgroundMenu());
 	
-	m_music.setBuffer(m_resources->getBufferMenu());
+	m_music.openFromFile("Resources/Sounds/music_menu.wav");
 	m_music.setVolume(m_volumen);
 	m_music.play();
 	m_music.setLoop(true);

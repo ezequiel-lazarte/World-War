@@ -20,7 +20,6 @@ public:
 	texture_t &getBackgroundMenu();
 	texture_t &getBackgroundMatch();
 	///sounds
-	sound_t &getBufferMenu();
 	sound_t &getBufferCambioOpcion();
 	///fonts
 	font_t &getFont();

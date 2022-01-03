@@ -21,15 +21,9 @@ sf::Texture &Resources::getBackgroundMatch ( ) {
 
 /** ****************** ************ ***** SOUNDS EFECTS ***** ************ ****************** **/
 
-sf::SoundBuffer & Resources::getBufferMenu ( ) {
-	m_buffer.loadFromFile("Resources/Sounds/music_menu.wav");
-	m_pos = 0;
-	return getBuffer_or_insert(m_s, m_buffer, m_pos);
-}
-
 sf::SoundBuffer & Resources::getBufferCambioOpcion ( ) {
 	m_buffer.loadFromFile("Resources/Sounds/cambio_opcion.wav");
-	m_pos = 1;
+	m_pos = 0;
 	return getBuffer_or_insert(m_s, m_buffer, m_pos);
 }
 
